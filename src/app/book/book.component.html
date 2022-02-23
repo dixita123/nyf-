@@ -1,0 +1,38 @@
+<div >
+    <div style="display: flex; margin: 50px;">
+        <div class="float-1 col-md-3">
+            <div class="section-1">
+                <img src="">
+            <button class="btn btn-primary">Borrow</button><br>
+            <button class="btn btn-outline-primary">Preview</button><br>
+            <button class="btn btn-success">Want to read</button>
+            </div>
+            <div class="section-2">
+                <h5>Share this book: </h5>
+                <a type="button"><i class="bi bi-facebook" style="background-color:rgb(21, 102, 134); color: white;"></i></a>
+                <a type="button"><i class="bi bi-twitter" style="background-color:skyblue; color: white;"></i></a>
+                <a type="button"><i class="bi bi-pinterest" style="background-color: rgb(245, 70, 70); color: white;"></i></a>
+                <a type="button"><i class="bi bi-code" style="background-color: rgb(248, 248, 53); color: white;"></i></a>
+            </div>
+        </div>
+        <div class="section-3">
+            <div style="display: flex;">
+             <h2>{{book.title}}</h2>
+             <p style="float: right; margin: 20px;">Last Edit- {{book.lastEdit | date}}</p>
+            </div>
+            <p><span style="font-weight: bold;">Publish Date- </span>{{book.publishDate}}</p>
+            <hr>
+            <p>This edition doesn't have a description yet. Can you add one?</p><br>
+            <h5>Subjects:</h5>
+            <p *ngFor="let i of book.subjects">{{i}}</p>
+            <p><span style="font-weight: bold;">No. Of Pages- </span> {{book.pages}}</p>
+            <div>
+                <div style="display: flex;">
+                    <h3>Community reviews</h3>
+                    <a style="float: right; margin: 20px;">Feedback?</a>
+                </div>
+                <p>No community reviews have been submitted for this work.</p>
+            </div>
+        </div>
+    </div>
+</div>

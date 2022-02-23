@@ -1,0 +1,27 @@
+
+.float-1{
+    border: 1px solid gray;
+}
+.section{
+    border: 1px solid gray;
+    margin-left: 50px;
+}
+.section-1,.section-2,.section-3{
+    padding: 50px;
+}
+.section-1 button{
+   width: 150px;
+   
+}
+.section-2 i{
+    width: 100px;
+    margin: 10px;
+    font-size: xx-large;
+    border-radius: 50%;
+}
+img{
+    width: 200px;
+    height: 350px;
+    margin: 10px;
+    background-color: gray;
+}

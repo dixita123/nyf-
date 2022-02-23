@@ -1,0 +1,23 @@
+<nav class="col-12" >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Booklist</a>
+    </div>
+  </nav>
+  
+  <div>
+    <div class="container-fluid input">
+      <input class="col-sm-6" type="search" placeholder="Search book title" aria-label="Search" #search (keyup)="result(search.value)" (onabort)="result(search.value)">
+  </div>
+  
+  <div  class="row" >
+    
+    <div class="card col-md-3 " *ngFor="let i of book" >
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{i.title}}</h5>
+      <p class="card-text">By {{i.author_name}}</p>
+      <p class="card-text">By {{i.publish_date}}</p>
+      <button (click)="sendTitle(i.seed[0])" routerLink="book">Show details</button>
+     </div>
+  </div>
+  <router-outlet></router-outlet>
